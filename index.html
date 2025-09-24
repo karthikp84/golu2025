@@ -18,6 +18,17 @@
     .image { flex: 1; }
     .image img { max-width: 100%; border-radius: 12px; display: block; }
     footer { margin-top: 40px; font-size: 14px; color:#666; }
+
+    /* 📱 Mobile-friendly tweaks */
+    @media (max-width: 768px) {
+      .links-image {
+        flex-direction: column;  /* stack instead of side by side */
+      }
+      .image {
+        order: -1;  /* move image ABOVE the links */
+        margin-bottom: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -26,7 +37,7 @@
     <h1>✨ Sandhiya & Karthik's Golu 2025 ✨</h1>
     <p>Explore divine stories retold through Golu displays.</p>
 
-    <!-- Links + Image side by side -->
+    <!-- Links + Image side by side (desktop) / stacked (mobile) -->
     <div class="links-image">
       <div class="links">
         <ul>
