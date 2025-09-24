@@ -9,18 +9,21 @@
     body { 
       font-family: system-ui, sans-serif; 
       margin:0; 
-      padding:0; 
+      padding:40px; 
       background:#fafafa; 
       color:#222; 
+
+      /* 🎉 Decorative border around whole page */
+      border: 80px solid transparent;
+      border-image: url('golu-border.png') 100 round;
+      background-clip: padding-box;
     }
     .wrap { 
       max-width: 1200px; 
-      margin: 40px auto; 
+      margin: 0 auto; 
       padding: 24px; 
-      border: 60px solid transparent; /* wide border for the image frame */
-      border-image: url('golu-border.png') 100 round; 
-      border-radius: 16px; 
-      background: #fff;
+      background: #fff;   /* content area stays clean white */
+      border-radius: 12px;
     }
     h1 { font-size: 2em; margin-bottom: 0.3em; text-align: center; }
     .links-image { display: flex; align-items: flex-start; gap: 40px; margin-top: 20px; }
@@ -35,6 +38,10 @@
 
     /* 📱 Mobile-friendly tweaks */
     @media (max-width: 768px) {
+      body {
+        border: 40px solid transparent;   /* shrink border on smaller screens */
+        border-image: url('golu-border.png') 100 round;
+      }
       .links-image { flex-direction: column; }
       .image { order: -1; margin-bottom: 20px; }
     }
